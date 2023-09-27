@@ -62,7 +62,7 @@ public class HttpRemoteCaller {
     }
     
     public static void rotateRoundRobinServer(){
-        currentServer = (currentServer + 1) % 3;
+        currentServer = (currentServer + 1) % LOG_SERVERS.length;
     }
 
 } 
