@@ -12,22 +12,39 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <body>
         <h1>Cadenas</h1>
         <form action="/log">
-            <label for="message">Digita tu cadena:</label><br>
-            <input type="text" id="message" name="message" value=""><br><br>
+            <label for="value">Digita tu cadena:</label><br>
+            <input type="text" id="value" name="value" value=""><br><br>
             <input type="button" value="Submit" onclick="loadGetMsg()">
         </form> 
-        <div id="getrespmsg"></div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>String</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="dataTableBody"></tbody>
+        </table>
 
         <script>
             function loadGetMsg() {
-                let message = document.getElementById("message").value;
+                let value = document.getElementById("value").value;
                 const xhttp = new XMLHttpRequest();
                 xhttp.onload = function() {
-                    document.getElementById("getrespmsg").innerHTML =
-                    this.responseText;
-                }
-                xhttp.open("GET", "/log?message="+message);
-                xhttp.send();
+                let data = JSON.parse(this.responseText);
+                let tableBody = document.getElementById("dataTableBody");
+                tableBody.innerHTML = ""; // Limpiar filas existentes
+
+                data.forEach(function(entry) {
+                    let row = tableBody.insertRow();
+                    let cell1 = row.insertCell(0);
+                    let cell2 = row.insertCell(1);
+                    cell1.innerHTML = entry.string;
+                    cell2.innerHTML = entry.date;
+                });
+            }
+            xhttp.open("GET", "/log?value="+value);
+            xhttp.send();
             }
         </script>
     </body>

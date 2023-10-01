@@ -25,12 +25,13 @@ public class HttpRemoteCaller {
     
     private static int currentServer = 0;
     
-    public static String remoteLogCall(String message) throws IOException{
-        return remoteHttpCall(LOG_SERVERS[currentServer] + "/logservice?message=" + message);
+    public static String remoteLogCall(String value) throws IOException{
+        //System.out.println("URL: " + remoteHttpCall(LOG_SERVERS[currentServer] + "/logservice?message=" + message));
+        return remoteHttpCall(LOG_SERVERS[currentServer] + "/logservice?message=" + value);
     }
 
     public static String remoteHttpCall(String url) throws IOException {
-
+        System.out.println("URL: " + url);
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         con.setRequestMethod("GET");
