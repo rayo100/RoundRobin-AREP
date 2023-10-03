@@ -43,11 +43,11 @@ Para compilar las imágenes de Docker, recuerde que debe estar ubicado en el dir
 
 APP-LB-RoundRobin
 ```
-docker build --tag roundrobin . -f Dockerfile
+docker build --tag roundrobin .
 ```
 Log Service
 ```
-docker build --tag logservice . -f Dockerfile
+docker build --tag logservice .
 ```
 
 # EJECUCIÓN DEL PROYECTO
