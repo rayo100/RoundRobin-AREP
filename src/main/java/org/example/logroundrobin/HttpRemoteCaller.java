@@ -19,9 +19,9 @@ public class HttpRemoteCaller {
 
     private static final String USER_AGENT = "Mozilla/5.0";
     private static final String[] LOG_SERVERS = new String[]{
-                                                    "http://localhost:4568",
-                                                    "http://localhost:4569",
-                                                    "http://localhost:4570"};
+                                                    "http://logservices1:4568",
+                                                    "http://logservices2:4568",
+                                                    "http://logservices3:4568"};
     
     private static int currentServer = 0;
     
