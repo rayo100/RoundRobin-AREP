@@ -1,2 +1,2 @@
-com\mycompany\logroundrobin\HttpRemoteCaller.class
-com\mycompany\logroundrobin\LogRoundRobin.class
+org\example\logroundrobin\LogRoundRobin.class
+org\example\logroundrobin\HttpRemoteCaller.class

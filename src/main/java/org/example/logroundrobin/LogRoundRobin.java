@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.logroundrobin;
+package org.example.logroundrobin;
 
 import java.io.IOException;
 import static spark.Spark.*;
