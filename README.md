@@ -63,10 +63,10 @@ docker run -d -p 34000:4567 --name roundrobin1 --network my_network roundrobin
 docker run -d -p 34001:4568 --name logservice1 --network my_network logservice
 ```
 ```  
-docker run -d -p 34002:4569 --name logservice2 --network my_network logservice
+docker run -d -p 34002:4568 --name logservice2 --network my_network logservice
 ```
 ```
-docker run -d -p 34003:4570 --name logservice3 --network my_network logservice
+docker run -d -p 34003:4568 --name logservice3 --network my_network logservice
 ```
 ```  
 docker run -d -p 27017:27017 -v mongodb:/data/db -v mongodb_config:/data/configdb --name db --network my_network 
