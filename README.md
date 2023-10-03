@@ -43,11 +43,11 @@ Para compilar las imágenes de Docker, recuerde que debe estar ubicado en el dir
 
 APP-LB-RoundRobin
 ```
-docker build --tag roundRobin . -f dockerfileroundrobin
+docker build --tag roundrobin . -f Dockerfile
 ```
 Log Service
 ```
-docker build --tag logService . -f dockerfilelogservice
+docker build --tag logservice . -f Dockerfile
 ```
 
 # EJECUCIÓN DEL PROYECTO
@@ -57,16 +57,16 @@ Para ejecutar el proyecto, corra los siguientes comandos teniendo en cuenta los 
 docker network create my_network
 ```
 ```
-docker run -d -p 36001:4568 --name logService1 --network my_network logService
+docker run -d -p 36001:4568 --name logservice1 --network my_network logservice
 ```
 ```  
-docker run -d -p 36002:4568 --name logService2 --network my_network logService
+docker run -d -p 36002:4568 --name logservice2 --network my_network logservice
 ```
 ```
-docker run -d -p 36003:4568 --name logService3 --network my_network logService
+docker run -d -p 36003:4568 --name logservice3 --network my_network logservice
 ```
 ```
-docker run -d -p 36000:4567 --name roundRobin --network my_network roundRobin
+docker run -d -p 36000:4567 --name roundrobin --network my_network roundrobin
 ```
 ```  
 docker run -d -p 27017:27017 -v mongodb:/data/db -v mongodb_config:/data/configdb --name db --network my_network 
