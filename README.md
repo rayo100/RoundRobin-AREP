@@ -75,7 +75,10 @@ Después, debería poder ingresar la página web en la siguiente url
 ```
 http://localhost:36000/index.html
 ```
-# VIDEO
+Se debería poder ver así:
+![image](https://github.com/rayo100/RoundRobin-AREP/assets/89558695/fffc9eff-97bb-4838-8f61-a202db3910ca)
+
+# VIDEO DESPLEGADO EN AWS
 
   
 
