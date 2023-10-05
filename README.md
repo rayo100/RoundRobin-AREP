@@ -54,26 +54,26 @@ docker build --tag logservice . -f Dockerfile
 
 Para ejecutar el proyecto, corra los siguientes comandos teniendo en cuenta los directorios:
 ```
-docker network create my_network
+docker network create create_network
 ```
 ```
-docker run -d -p 34000:4567 --name roundrobin1 --network my_network roundrobin
+docker run -d -p 36000:4567 --name roundrobin1 --network create_network roundrobin
 ```
 ```
-docker run -d -p 34001:4568 --name logservice1 --network my_network logservice
-```
-```  
-docker run -d -p 34002:4568 --name logservice2 --network my_network logservice
-```
-```
-docker run -d -p 34003:4568 --name logservice3 --network my_network logservice
+docker run -d -p 36001:4568 --name logservice1 --network create_network logservice
 ```
 ```  
-docker run -d -p 27017:27017 -v mongodb:/data/db -v mongodb_config:/data/configdb --name db --network my_network 
+docker run -d -p 36002:4568 --name logservice2 --network create_network logservice
+```
+```
+docker run -d -p 36003:4568 --name logservice3 --network create_network logservice
+```
+```  
+docker run -d -p 27017:27017 -v mongodb:/data/db -v mongodb_config:/data/configdb --name db --network create_network mongo:3.6.1 mongod
 ```
 Después, debería poder ingresar la página web en la siguiente url
 ```
-http://localhost:36000/app.html
+http://localhost:36000/index.html
 ```
 # VIDEO
 
