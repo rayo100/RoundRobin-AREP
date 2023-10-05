@@ -16,7 +16,7 @@ public class LogRoundRobin {
         port(getPort());
         staticFiles.location("/public");
         get("/log", (req, pesp) -> {
-            String val = req.queryParams("value");
+            String val = req.queryParams("message").replace(" ", "%20");
             return LogMessage(val);
         });
         

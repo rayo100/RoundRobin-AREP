@@ -2,22 +2,22 @@ version: '3'
 
 services:
   web_app:
-    image: cesar0616/roundrobin
+    image: roundrobin
     container_name: roundrobin
     ports:
       - "36000:4567"
   web_service1:
-    image: cesar0616/logservice
+    image: logservice
     container_name: logservice1
     ports:
       - "36001:4568"
   web_service2:
-    image: cesar0616/logservice
+    image: logservice
     container_name: logservice2
     ports:
       - "36002:4568"
   web_service3:
-    image: cesar0616/logservice
+    image: logservice
     container_name: logservice3
     ports:
       - "36003:4568"
