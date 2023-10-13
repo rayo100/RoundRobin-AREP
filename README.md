@@ -80,7 +80,7 @@ Se debería poder ver así:
 
 # VIDEO DESPLEGADO EN AWS
 
-  
+https://youtu.be/ou5bqnooqcA
 
 # HERRAMIENTAS
 
